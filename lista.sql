@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/03/2025 às 11:58
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- Tempo de geração: 15/04/2025 às 16:04
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,9 +28,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `lista` (
-  `id_afazer` int(10) NOT NULL,
-  `afazer` varchar(256) NOT NULL
+  `id_tarefa` int(3) NOT NULL,
+  `nm_tarefa` varchar(30) NOT NULL,
+  `desc_tarefa` varchar(350) NOT NULL,
+  `dataInicio_tarefa` date NOT NULL,
+  `dataFim_tarefa` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `lista`
+--
+
+INSERT INTO `lista` (`id_tarefa`, `nm_tarefa`, `desc_tarefa`, `dataInicio_tarefa`, `dataFim_tarefa`) VALUES
+(1, 'aaa', 'sass', '2025-04-16', '2025-05-01');
 
 --
 -- Índices para tabelas despejadas
@@ -40,7 +50,7 @@ CREATE TABLE `lista` (
 -- Índices de tabela `lista`
 --
 ALTER TABLE `lista`
-  ADD PRIMARY KEY (`id_afazer`);
+  ADD PRIMARY KEY (`id_tarefa`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -50,7 +60,7 @@ ALTER TABLE `lista`
 -- AUTO_INCREMENT de tabela `lista`
 --
 ALTER TABLE `lista`
-  MODIFY `id_afazer` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_tarefa` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
