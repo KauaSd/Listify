@@ -20,7 +20,7 @@ $resultado=mysqli_query($conexao,$query);
   <body>
     <div class="Menu">
       <div class="Foto">
-        <img src="" alt="">
+        <img src="./imgs/LogoListifySemFundo.png" alt="" width=213px height=135px>
       </div>
       <div class="btnMenu">
         <a href="?pagina=form">
