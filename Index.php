@@ -33,7 +33,7 @@ $resultado=mysqli_query($conexao,$query);
         </div>
         <div class="btnMensal">
             <a href="" class="amensal">
-            <i class="fa-solid fa-calendar mensalicon"></i>
+            <i class="fa-regular fa-calendar mensalicon"></i>
                 <button class="mensal">Mensal</button>
             </a>
         </div>
