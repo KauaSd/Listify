@@ -22,27 +22,29 @@ $resultado=mysqli_query($conexao,$query);
 
 <body>
     <div class="Menu">
-        <div class="Foto">
+        <div class="LogoListify">
             <img src="./imgs/LogoListifySemFundo.png" alt="" width=213px height=135px>
         </div>
-        <div class="btnMenu">
-            <a href="?pagina=form" class="ahome">
-                <i class="fa-solid fa-house casa"></i>
-                <button class="home">Home</button>
-            </a>
-        </div>
-        <div class="btnMensal">
-            <a href="" class="amensal">
-            <i class="fa-regular fa-calendar mensalicon"></i>
-                <button class="mensal">Mensal</button>
-            </a>
-        </div>
-        <div class="linha"></div>
-        <div class="btnadicionar">
-            <a href="" class="aadicionar">
-            <i class="fa-solid fa-plus adicionaricon"></i>
-                <button class="adicionar">adicionar</button>
-            </a>
+        <div class="btnsMenu">
+            <div class="btnHome">
+                <a href="?pagina=form" class="ahome">
+                    <i class="fa-solid fa-house casa"></i>
+                    <button class="home">Home</button>
+                </a>
+            </div>
+            <div class="btnMensal">
+                <a href="" class="amensal">
+                <i class="fa-regular fa-calendar mensalicon"></i>
+                    <button class="mensal">Mensal</button>
+                </a>
+            </div>
+            <div class="linha"></div>
+            <div class="btnAdicionar">
+                <a href="" class="aadicionar">
+                <i class="fa-solid fa-plus adicionaricon"></i>
+                    <button class="adicionar">Adicionar</button>
+                </a>
+            </div>
         </div>
     </div>
     <div class="Title">
