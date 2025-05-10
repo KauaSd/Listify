@@ -36,7 +36,7 @@
                     <input class="form-control" type="text" name="descricao">
                     <input class="form-control" type="date" name="dataInicio">
                     <input class="form-control" type="date" name="dataFim">
-                    <button type="submit" class="btn btn-dark">Criar Tarefa</button>
+                    <button type="submit" class="btnCriarTarefa">Criar Tarefa</button>
                 </form>
             </div>
         </div>
