@@ -69,8 +69,12 @@ body.loginPage{
 
 .btnHome, .btnMensal, .btnAdicionar {
   margin-left: 50px;
+  transition: 0.3s;
 }
 
+.btnHome:hover, .btnMensal:hover, .btnAdicionar:hover{
+  border-bottom: 4px solid #21A179;
+}
 .btnAdicionar, .linha, .btnMensal {
   margin-top: 5px;
 }
@@ -109,7 +113,7 @@ body.loginPage{
 
 .linha {
   background-color: #E6E6E6;
-  width: 200px;
+  width: 250px;
   height: 2px;
   margin-left: 30px;
 }
@@ -129,6 +133,11 @@ body.loginPage{
     width: 90%;
     padding: 20px;
   }
+}
+
+.Menu{
+  margin-top: -4vh;
+  margin-left: -3vh;
 }
 
 @media (max-width: 480px) {
@@ -155,7 +164,7 @@ body.loginPage{
 .Header{
   width: 100vw;
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 .FundoHeader{
   margin-top: 7vh;
@@ -198,6 +207,11 @@ body.loginPage{
   background-color: #ffff;
   padding: 30px;
   gap: 15px;
+  transition: 0.5s;
+}
+
+.quadradologin:hover{
+  margin-top: 3vh;
 }
 .quadradologin h1{
   align-self: center;
@@ -213,4 +227,18 @@ body.loginPage{
   color:white;
   border-radius: 10vh;
   cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnentrar:hover{
+  background-color: white;
+  color:#21A179;
+  border: 2px solid #21A179;
+  font-weight: bold;
+}
+
+input[name="usuario"], input[name="senha"]{
+    border: 2px solid rgb(164, 164, 164);
+    border-radius: 2vh;
+    padding: 0 1vh;
 }

@@ -12,11 +12,11 @@
 				<h1>Entre em sua conta</h1>
 				<br>
 				<form method="post" action="verificacao.php">
-					<label>Digite o nome do usuário</label><br>
-					<input type="text" name="usuario" placeholder="Nome do usuário">
+					<label>Nome de Usuário:</label><br>
+					<input type="text" name="usuario" placeholder="Digite o nome do usuário">
 					<br><br>
-					<label>Digite a senha</label><br>
-					<input type="password" name="senha" placeholder="Senha">
+					<label>Senha:</label><br>
+					<input type="password" name="senha" placeholder="Digite a senha">
 					<br><br>
 					<input type="submit" value="Entrar" class="btnentrar">
 				</form>
