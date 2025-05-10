@@ -46,6 +46,8 @@ body.loginPage{
   align-items: center;
   height: 100vh;
   background-color: #21A179;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .Form {
@@ -237,8 +239,34 @@ body.loginPage{
   font-weight: bold;
 }
 
-input[name="usuario"], input[name="senha"]{
+input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="descricao"]{
     border: 2px solid rgb(164, 164, 164);
     border-radius: 2vh;
     padding: 0 1vh;
+}
+
+.titlePage{
+  color: white;
+  font-weight: bolder;
+  font-size: 40px;
+  width: 300px;
+  margin-left: -95vh;
+  font-weight: 900;
+}
+
+.Formulario{
+  display: flex;
+  flex-direction: column;
+  margin-left: -70vh;
+  margin-top: -15vh;
+}
+
+.labelFormulario{
+  color: #21A179;
+  font-weight: 900;
+}
+
+input[name="descricao"]{
+  height: 30vh;
+  width: 60vh;
 }

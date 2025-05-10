@@ -27,10 +27,13 @@
         </div>
 
         <div class="formholder">
+            <h1 class="titlePage">Adicionar Nova Tarefa</h1>
             <div class="Form">
-                <form action="bd.php" method="POST">
-                    <input class="form-control" type="text" placeholder="Nome da Tarefa" name="tarefa">
-                    <input class="form-control" type="text" placeholder="Descrição" name="descricao">
+                <form class="Formulario" action="bd.php" method="POST">
+                    <label class="labelFormulario">Nome da Tarefa:</label>
+                    <input class="form-control" type="text" name="tarefa">
+                    <label class="labelFormulario">Decrição:</label>
+                    <input class="form-control" type="text" name="descricao">
                     <input class="form-control" type="date" name="dataInicio">
                     <input class="form-control" type="date" name="dataFim">
                     <button type="submit" class="btn btn-dark">Criar Tarefa</button>
