@@ -94,7 +94,7 @@ body.loginPage{
   font-size: 24px;
   background-color: transparent;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .ahome, .amensal, .aadicionar {
@@ -215,13 +215,21 @@ body.loginPage{
 .quadradologin:hover{
   margin-top: 3vh;
 }
+
 .quadradologin h1{
   align-self: center;
   font-weight: 600;
 }
+
 .quadradologin input{
   width: 70vh;
 }
+
+input[name="usuario"]:focus, input[name="senha"]:focus{
+  border-color: #21A179;
+  outline: none;
+}
+
 .btnentrar{
   background-color: #21A179;
   width: 10vw;
@@ -231,13 +239,13 @@ body.loginPage{
   border-radius: 10vh;
   cursor: pointer;
   transition: 0.5s;
+  font-weight: 700;
 }
 
 .btnentrar:hover{
   background-color: white;
   color:#21A179;
-  border: 2px solid #21A179;
-  font-weight: bold;
+  border: 3px solid #21A179;
 }
 
 input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="descricao"]{
@@ -250,9 +258,9 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
   color: white;
   font-weight: bolder;
   font-size: 5vh;
-  width: 40vh;
+  width: 35vh;
   margin-left: -100vh;
-  font-weight: 900;
+  font-weight: 700;
   margin-top: -3vh;
 }
 
@@ -265,7 +273,7 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
 
 .labelFormulario{
   color: #21A179;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 input[name="descricao"]{
@@ -274,6 +282,11 @@ input[name="descricao"]{
 }
 input[name="tarefa"], input[name="dataInicio"], input[name="dataFim"]{
   width: 60vh;
+}
+
+input[name="tarefa"]:focus, input[name="descricao"]:focus{
+  border-color: #21A179;
+  outline: none;
 }
 
 .btnCriarTarefa{
@@ -285,12 +298,11 @@ input[name="tarefa"], input[name="dataInicio"], input[name="dataFim"]{
   transition: 0.5s;
   height: 4vh;
   font-size: 2vh;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .btnCriarTarefa:hover{
     background-color: white;
   color:#21A179;
-  border: 2px solid #21A179;
-  font-weight: 500;
+  border: 3px solid #21A179;
 }
