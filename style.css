@@ -32,7 +32,7 @@ body.loginPage{
   height: 100vh;
   flex-direction: column;
   padding: 2rem 1rem;
-  align-items: flex-start;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,9 +56,9 @@ body.loginPage{
   height:70%;
   border-radius: 4vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 30px;
   gap: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@ body.loginPage{
 }
 
 .btnsMenu {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .home, .mensal, .adicionar {
@@ -115,7 +115,7 @@ body.loginPage{
 
 .linha {
   background-color: #E6E6E6;
-  width: 250px;
+  width: 300px;
   height: 2px;
   margin-left: 30px;
 }
@@ -259,16 +259,32 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
   font-weight: bolder;
   font-size: 5vh;
   width: 35vh;
-  margin-left: -100vh;
+  margin-left: -90vh;
   font-weight: 700;
   margin-top: -3vh;
+}
+
+.Form{
+  display: flex;
+  flex-direction: column;
 }
 
 .Formulario{
   display: flex;
   flex-direction: column;
-  margin-top: -15vh;
-  width: 130vh;
+  margin-top: 1vh;
+  width: 120vh;
+  gap: 15vh;
+}
+
+.layoutForm{
+  display: flex;
+  gap: 15vh;
+}
+
+.inputsForm{
+  display: flex;
+  flex-direction: column;
 }
 
 .labelFormulario{
@@ -299,10 +315,95 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
   height: 4vh;
   font-size: 2vh;
   font-weight: 700;
+  align-self: center;
+  width: 120vh;
 }
 
 .btnCriarTarefa:hover{
     background-color: white;
   color:#21A179;
   border: 3px solid #21A179;
+}
+
+.calendar{
+  width: 380px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.monthYear{
+  text-align: center;
+  font-weight: 600;
+  width: 150px;
+}
+
+.header button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.days{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+  text-align: center;
+  padding: 5px;
+  color: #999FA6;
+  font-weight: 500;
+}
+
+.dates{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 5px;
+}
+
+.date{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s;
+}
+
+.date:hover, .date.active{
+  background-color: #21A179;
+  color: #fff;
+}
+
+.date.inactive{
+  color: #d2d2d2;
+}
+
+.date.inactive:hover{
+  color: #fff;
 }
