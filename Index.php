@@ -25,6 +25,7 @@ else{
 
 switch ($pagina) {
 	case 'addTarefa': include 'view/addTarefa.php'; break;
+	case 'mensal': include 'view/mensal.php'; break;
 	default: include 'view/login.php'; 
 	break;
 }

@@ -90,11 +90,14 @@ body.loginPage{
   display: flex;
   text-decoration: none;
   border: none;
-  color: #21A179;
+  color: #323232;
   font-size: 24px;
   background-color: transparent;
   cursor: pointer;
   font-weight: 600;
+}
+:where(.home,.ahome,.amensal,.aadicionar,.mensal,.adicionar).active{
+  background-color: #21A179;
 }
 
 .ahome, .amensal, .aadicionar {
@@ -103,7 +106,7 @@ body.loginPage{
 }
 
 .casa, .mensalicon, .adicionaricon {
-  color: #21A179;
+  color: #323232;
   font-size: 23px;
   margin-top: 5px;
   margin-right: 15px;
