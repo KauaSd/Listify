@@ -15,15 +15,6 @@ body.loginPage{
   background-position: center;
   background-repeat: no-repeat;
 }
-.divzona {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-size: 16px;
-}
 
 .Menu {
   width: 20%;
@@ -95,9 +86,6 @@ body.loginPage{
   background-color: transparent;
   cursor: pointer;
   font-weight: 600;
-}
-:where(.home,.ahome,.amensal,.aadicionar,.mensal,.adicionar).active{
-  background-color: #21A179;
 }
 
 .ahome, .amensal, .aadicionar {
@@ -410,3 +398,11 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
 .date.inactive:hover{
   color: #fff;
 }
+
+/* CSS para link ativo */
+a.active, a.active i {
+  color: #21A179 !important; /* cor verde */
+  background-color: transparent !important; /* sem fundo */
+  box-shadow: none !important; /* remove sombras */
+}
+
