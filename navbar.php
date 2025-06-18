@@ -33,5 +33,8 @@ function isActive($pagina, $paginaAtual) {
                 </a>
             </div>
         </div>
+        <div class="User">
+            <i class="fa-solid fa-circle-user"></i>
+        </div>
     </div>
 

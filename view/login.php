@@ -1,3 +1,4 @@
+<title> Login | Listify </title>
 <body class="loginPage">
 	<div class="divzonalogin">
 		<div class="Header">

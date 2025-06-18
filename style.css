@@ -4,12 +4,11 @@
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
-html, body{
+html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
-body.loginPage{
+
+body.loginPage {
   background-image: url('./imgs/BolinhaFundoLogin.png');
   background-size: cover;
   background-position: center;
@@ -30,8 +29,8 @@ body.loginPage{
 }
 
 .formholder {
-  margin-left: 20%;
-  width: 80%;
+  width: 100%;
+  padding-left: 20%; /* Corrigido aqui */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +40,23 @@ body.loginPage{
   gap: 3vh;
 }
 
+.FormHome {
+  height: 60% !important;
+}
+
+.User {
+  width: 100%;
+  height: 10%;
+  background-color: #E4E4E4;
+}
+
 .Form {
   background-color: #fff;
   width: 80%;
-  height:70%;
+  height: 70%;
   border-radius: 4vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 30px;
   gap: 15px;
@@ -65,9 +73,10 @@ body.loginPage{
   transition: 0.3s;
 }
 
-.btnHome:hover, .btnMensal:hover, .btnAdicionar:hover{
+.btnHome:hover, .btnMensal:hover, .btnAdicionar:hover {
   border-bottom: 4px solid #21A179;
 }
+
 .btnAdicionar, .linha, .btnMensal {
   margin-top: 5px;
 }
@@ -118,8 +127,8 @@ body.loginPage{
   }
 
   .formholder {
-    margin-left: 25%;
-    width: 75%;
+    padding-left: 25%;
+    width: 100%;
   }
 
   .Form {
@@ -128,9 +137,13 @@ body.loginPage{
   }
 }
 
-.Menu{
-  margin-top: -4vh;
-  margin-left: -3vh;
+.titleFormHome {
+  color: #21A179;
+  font-weight: 700;
+  font-size: 32px;
+  width: 35vh;
+  margin-left: -87vh;
+  margin-top: 0.5vh;
 }
 
 @media (max-width: 480px) {
@@ -144,7 +157,7 @@ body.loginPage{
   }
 
   .formholder {
-    margin-left: 0;
+    padding-left: 0;
     width: 100%;
     padding: 1rem;
   }
@@ -154,12 +167,30 @@ body.loginPage{
     padding: 15px;
   }
 }
-.Header{
+
+.SemanalHeader {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.Semanal {
+  width: 100%;
+  height: 6.5vh;
+  border-radius: 2vh;
+  background-color: #28B287;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
-.FundoHeader{
+
+.FundoHeader {
   margin-top: 7vh;
   width: 25vw;
   height: 8vh;
@@ -169,98 +200,96 @@ body.loginPage{
   align-items: center;
   justify-content: center;
 }
-.ListifyImg{
+
+.ListifyImg {
   width: 10vh;
 }
-.imgheader{
+
+.imgheader {
   width: 9vw;
   margin-left: -2vw;
   margin-top: 1vh;
 }
+
 .formlogin {
   display: flex;
-  justify-content: center; /* centraliza verticalmente */
+  justify-content: center;
   align-items: center;
-  height: 70vh;          /* ocupa a altura toda da tela */
+  height: 70vh;
 }
-.divzonalogin{
+
+.divzonalogin {
   width: 100vw;
   height: 100vh;
 }
-.quadradologin{
+
+.quadradologin {
   width: 40vw;
   height: 50vh;
   border: 2px solid #CFCDCD;
   display: flex;
   border-radius: 5vh;
-  flex-direction: column; /* empilha os itens verticalmente */
-  justify-items: center;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffff;
+  background-color: #fff;
   padding: 20vh;
   gap: 3vh;
   transition: 0.5s;
 }
 
-.quadradologin:hover{
+.quadradologin:hover {
   margin-top: 3vh;
 }
 
-.quadradologin h1{
+.quadradologin h1 {
   align-self: center;
   font-weight: 600;
 }
 
-.quadradologin input{
+.quadradologin input {
   width: 70vh;
 }
 
-input[name="usuario"]:focus, input[name="senha"]:focus{
+input[name="usuario"]:focus, input[name="senha"]:focus {
   border-color: #21A179;
   outline: none;
 }
 
-.btnentrar{
+.btnentrar {
   background-color: #21A179;
   width: 10vw;
   height: 5vh;
-  border:none;
-  color:white;
+  border: none;
+  color: white;
   border-radius: 10vh;
   cursor: pointer;
   transition: 0.5s;
   font-weight: 700;
 }
 
-.btnentrar:hover{
+.btnentrar:hover {
   background-color: white;
-  color:#21A179;
+  color: #21A179;
   border: 3px solid #21A179;
 }
 
-input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="descricao"]{
-    border: 2px solid rgb(164, 164, 164);
-    border-radius: 2vh;
-    padding: 0 1vh;
+input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="descricao"] {
+  border: 2px solid rgb(164, 164, 164);
+  border-radius: 2vh;
+  padding: 0 1vh;
 }
 
-.titlePage{
+.titlePage {
   color: white;
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 5vh;
   width: 35vh;
   margin-left: -90vh;
-  font-weight: 700;
   margin-top: -3vh;
 }
 
-.Form{
-  display: flex;
-  flex-direction: column;
-}
-
-.Formulario{
+.Formulario {
   display: flex;
   flex-direction: column;
   margin-top: 1vh;
@@ -268,38 +297,39 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
   gap: 15vh;
 }
 
-.layoutForm{
+.layoutForm {
   display: flex;
   gap: 15vh;
 }
 
-.inputsForm{
+.inputsForm {
   display: flex;
   flex-direction: column;
 }
 
-.labelFormulario{
+.labelFormulario {
   color: #21A179;
   font-weight: 700;
 }
 
-input[name="descricao"]{
+input[name="descricao"] {
   height: 30vh;
   width: 60vh;
 }
-input[name="tarefa"], input[name="dataInicio"], input[name="dataFim"]{
+
+input[name="tarefa"], input[name="dataInicio"], input[name="dataFim"] {
   width: 60vh;
 }
 
-input[name="tarefa"]:focus, input[name="descricao"]:focus{
+input[name="tarefa"]:focus, input[name="descricao"]:focus {
   border-color: #21A179;
   outline: none;
 }
 
-.btnCriarTarefa{
+.btnCriarTarefa {
   background-color: #21A179;
-  border:none;
-  color:white;
+  border: none;
+  color: white;
   border-radius: 10vh;
   cursor: pointer;
   transition: 0.5s;
@@ -310,13 +340,14 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
   width: 120vh;
 }
 
-.btnCriarTarefa:hover{
-    background-color: white;
-  color:#21A179;
+.btnCriarTarefa:hover {
+  background-color: white;
+  color: #21A179;
   border: 3px solid #21A179;
 }
 
-.calendar{
+/* Calendário */
+.calendar {
   width: 380px;
   height: auto;
   display: flex;
@@ -327,20 +358,20 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
 
-.monthYear{
+.monthYear {
   text-align: center;
   font-weight: 600;
   width: 150px;
 }
 
-.header button{
+.header button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,31 +384,24 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
-.days{
+.days, .dates {
   display: grid;
   grid-template-columns: repeat(7,1fr);
+  gap: 5px;
 }
 
-.day{
+.day {
   text-align: center;
   padding: 5px;
   color: #999FA6;
   font-weight: 500;
 }
 
-.dates{
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
-  gap: 5px;
-}
-
-.date{
+.date {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 10px;
-  margin: auto;
   cursor: pointer;
   font-weight: 600;
   border-radius: 50%;
@@ -386,23 +410,22 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus{
   transition: 0.2s;
 }
 
-.date:hover, .date.active{
+.date:hover, .date.active {
   background-color: #21A179;
   color: #fff;
 }
 
-.date.inactive{
+.date.inactive {
   color: #d2d2d2;
 }
 
-.date.inactive:hover{
+.date.inactive:hover {
   color: #fff;
 }
 
-/* CSS para link ativo */
+/* Link ativo */
 a.active, a.active i {
-  color: #21A179 !important; /* cor verde */
-  background-color: transparent !important; /* sem fundo */
-  box-shadow: none !important; /* remove sombras */
+  color: #21A179 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
-

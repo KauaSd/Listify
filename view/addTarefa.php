@@ -1,7 +1,7 @@
 <?php 
 include 'navbar.php';
 ?>
-
+    <title> Adicionar Tarefa | Listify </title>
         <div class="formholder">
             <h1 class="titlePage">Adicionar Nova Tarefa</h1>
             <div class="Form">
