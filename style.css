@@ -21,7 +21,7 @@ body.loginPage {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  padding: 2rem 1rem;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -69,7 +69,7 @@ body.loginPage {
 }
 
 .btnHome, .btnMensal, .btnAdicionar {
-  margin-left: 50px;
+  margin-left: 40px;
   transition: 0.3s;
 }
 
@@ -82,7 +82,8 @@ body.loginPage {
 }
 
 .btnsMenu {
-  margin-top: 60px;
+  margin-top: -30vh;
+  margin-left: -40px;
 }
 
 .home, .mensal, .adicionar {
@@ -115,7 +116,7 @@ body.loginPage {
 
 .linha {
   background-color: #E6E6E6;
-  width: 300px;
+  width: 15vw;
   height: 2px;
   margin-left: 30px;
 }
@@ -141,8 +142,7 @@ body.loginPage {
   color: #21A179;
   font-weight: 700;
   font-size: 32px;
-  width: 35vh;
-  margin-left: -87vh;
+  margin-left: -90vh;
   margin-top: 0.5vh;
 }
 
@@ -284,8 +284,7 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
   color: white;
   font-weight: 700;
   font-size: 5vh;
-  width: 35vh;
-  margin-left: -90vh;
+  margin-left: -110vh;
   margin-top: -3vh;
 }
 
@@ -432,7 +431,7 @@ a.active, a.active i {
 
 .BarraSemana {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap; /* quebra em telas pequenas */
   margin-bottom: 20px;
