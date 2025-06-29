@@ -30,4 +30,3 @@ switch ($pagina) {
 	default: include 'view/login.php'; 
 	break;
 }
-

@@ -429,3 +429,28 @@ a.active, a.active i {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
+.BarraSemana {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* quebra em telas pequenas */
+  margin-bottom: 20px;
+  background-color: #28B287;
+  width: 80vw;
+  border-radius: 10px;
+}
+
+.btnDia {
+  padding: 10px 15px;;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  min-width: 80px;
+  user-select: none;
+  color: #2A735C;
+}
+
+.btnDia.active {
+  color: white;
+}

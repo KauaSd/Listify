@@ -38,6 +38,6 @@ include 'navbar.php';
             </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="mensal.js"></script>
 </body>
 </html>
