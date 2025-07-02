@@ -1,5 +1,4 @@
 <?php
-
 include 'db.php';
 
 $date = $_GET['date'] ?? null;

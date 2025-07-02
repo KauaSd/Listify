@@ -5,7 +5,7 @@ $semana = pegarDiasSemana();
 ?>
 <title> Home | Listify </title>
 <div class="formholder">
-    <h1 class="titlePage titleHome">Lista <br> de Tarefas</h1>
+    <h1 class="titlePage titleHome">Lista de Tarefas</h1>
     <div class="SemanalHeader" style="display: flex; align-items: center;">
         <button id="prev" type="button">◀</button>
         <div class="BarraSemana" id="barraSemana">

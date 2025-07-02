@@ -16,15 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${diaSemana},${diaMes}/${mes}`;
   }
 
-  function initDias() {
-    const hoje = new Date();
-    for(let i = -14; i <= 14; i++) {
-      let d = new Date(hoje);
-      d.setDate(hoje.getDate() + i);
-      dias.push({ date: d, label: formatarDia(d) });
-    }
-    startIndex = 14;
+ function initDias() {
+  const hoje = new Date();
+
+  // Domingo da semana atual
+  const domingo = new Date(hoje);
+  domingo.setDate(hoje.getDate() - hoje.getDay()); // 0 = domingo
+
+  dias = [];
+
+  // Gerar dias de 4 semanas (28 dias, centrados na semana atual)
+  for (let i = -14; i <= 14; i++) {
+    let d = new Date(domingo);
+    d.setDate(domingo.getDate() + i);
+    dias.push({ date: d, label: formatarDia(d) });
   }
+
+  // Encontrar o índice do dia atual dentro da lista de dias
+  const hojeStr = hoje.toISOString().slice(0, 10);
+  startIndex = dias.findIndex(d => d.date.toISOString().slice(0, 10) === hojeStr) - (hoje.getDay());
+}
 
   function renderDias() {
     barraSemana.innerHTML = '';
@@ -45,10 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       barraSemana.appendChild(div);
     }
-    const primeiroBotao = barraSemana.querySelector('.btnDia');
-    if(primeiroBotao){
-      primeiroBotao.classList.add('active');
-      carregarTarefas(primeiroBotao.dataset.date);
+    const hojeStr = new Date().toISOString().slice(0, 10);
+    let encontrouHoje = false;
+
+    barraSemana.querySelectorAll('.btnDia').forEach(btn => {
+      if (btn.dataset.date === hojeStr) {
+        btn.classList.add('active');
+        carregarTarefas(btn.dataset.date);
+        encontrouHoje = true;
+      }
+    });
+
+    if (!encontrouHoje) {
+      const primeiro = barraSemana.querySelector('.btnDia');
+      if (primeiro) {
+        primeiro.classList.add('active');
+        carregarTarefas(primeiro.dataset.date);
+      }
     }
   }
 
@@ -58,13 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(tasks => {
         container.innerHTML = '';
         if(tasks.length === 0) {
-          container.innerHTML = '<p>Sem tarefas para esse dia</p>';
+          container.innerHTML = '<strong class="message">Sem tarefas para esse dia</strong>';
           return;
         }
         tasks.forEach(task => {
           const el = document.createElement('div');
           el.className = 'task';
-          el.textContent = task.nm_tarefa;
+          el.innerHTML = `
+            <input type="checkbox">
+            <strong class="task-name">${task.nm_tarefa}</strong><br>
+            <span class="task-desc">${task.desc_tarefa}</span><br>
+          `;
           container.appendChild(el);
         });
       });

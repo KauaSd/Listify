@@ -168,22 +168,6 @@ body.loginPage {
   }
 }
 
-.SemanalHeader {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-}
-
-.Semanal {
-  width: 100%;
-  height: 6.5vh;
-  border-radius: 2vh;
-  background-color: #28B287;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .Header {
   width: 100vw;
   display: flex;
@@ -284,7 +268,7 @@ input[name="usuario"], input[name="senha"], input[name="tarefa"], input[name="de
   color: white;
   font-weight: 700;
   font-size: 5vh;
-  margin-left: -110vh;
+  align-self: center;
   margin-top: -3vh;
 }
 
@@ -383,6 +367,13 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus {
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
 
+#next, #prev{
+  background-color: transparent;
+  border: none;
+  color:#2A735C;
+  cursor: pointer;
+}
+
 .days, .dates {
   display: grid;
   grid-template-columns: repeat(7,1fr);
@@ -429,19 +420,17 @@ a.active, a.active i {
   box-shadow: none !important;
 }
 
-.BarraSemana {
+.SemanalHeader {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap; /* quebra em telas pequenas */
   margin-bottom: 20px;
   background-color: #28B287;
-  width: 80vw;
-  border-radius: 10px;
+  width: 64vw;
+  border-radius: 1.5vh;
 }
-
 .btnDia {
-  padding: 10px 15px;;
+  padding: 10px 2vw;;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
@@ -452,4 +441,24 @@ a.active, a.active i {
 
 .btnDia.active {
   color: white;
+}
+
+.task {
+  background-color: #21A179;
+  width: 58vw;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.task strong.task-name {
+  font-weight: bold;
+  color: white;
+}
+
+.task span.task-desc {
+  color:#323232;  
+}
+
+.message{
+  color:#323232;
 }
