@@ -443,6 +443,12 @@ a.active, a.active i {
   color: white;
 }
 
+#containerTarefas{
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+}
+
 .task {
   background-color: #21A179;
   width: 58vw;
@@ -456,7 +462,7 @@ a.active, a.active i {
 }
 
 .task span.task-desc {
-  color:#323232;  
+  color:#323232;
 }
 
 .message{
