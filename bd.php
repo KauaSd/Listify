@@ -15,10 +15,8 @@ $query = "INSERT INTO lista (nm_tarefa, desc_tarefa, dataTarefa, tarefaConcluida
           VALUES ('$tarefa', '$desc', '$dataTarefa', '$concluida')";
  
 if (mysqli_query($conexao, $query)) {
-    echo "<script>
-            alert('Tarefa cadastrada com sucesso!');
-            window.location.href = 'index.php?pagina=addTarefa';
-          </script>";
+    header("Location: index.php?pagina=addTarefa&showModal=1");
+    exit;
 } else {
     echo "Erro ao cadastrar tarefa: " . mysqli_error($conexao);
 }

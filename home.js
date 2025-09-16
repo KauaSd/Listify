@@ -98,8 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <strong class="task-name">${task.nm_tarefa}</strong><br>
             <span class="task-desc">${task.desc_tarefa}</span><br>
             <span class="task-delete">
-              <a href="deletarTarefa.php?id=${task.id_tarefa}" onclick="return confirm('Deseja deletar esta tarefa?')">Deletar</a>
-              <a href="editartarefaform.php?id=${task.id_tarefa}")">editar</a>
+            <div class="botoes">
+              <a href="deletarTarefa.php?id=${task.id_tarefa}" onclick="return confirm('Deseja deletar esta tarefa?')" class="btndeletar">Deletar</a>
+              <a href="editartarefaform.php?id=${task.id_tarefa}")" class="btneditar">editar</a>
+              </div>
             </span>
           `;
           container.appendChild(el);

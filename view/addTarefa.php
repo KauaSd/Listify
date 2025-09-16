@@ -1,6 +1,23 @@
 <?php 
 include 'navbar.php';
-?>
+if (isset($_GET['showModal']) && $_GET['showModal'] == 1): ?>
+    <div class="espera-overlay" id="espera">
+        <div class="espera-box">
+            <h2>Tarefa adicionada!</h2>
+        </div>
+    </div>
+
+<script>
+    setTimeout(function() {
+        const modal = document.getElementById('espera');
+        if(modal) modal.style.display = 'none';
+
+        const url = new URL(window.location);
+        url.searchParams.delete('showModal');
+        window.history.replaceState({}, document.title, url);
+    }, 1000);
+</script>
+<?php endif; ?>
     <title> Adicionar Tarefa | Listify </title>
         <div class="formholder">
             <h1 class="titlePage">Adicionar Nova Tarefa</h1>

@@ -30,7 +30,7 @@ body.loginPage {
 
 .formholder {
   width: 100%;
-  padding-left: 20%; /* Corrigido aqui */
+  padding-left: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +121,7 @@ body.loginPage {
   margin-left: 30px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .Menu {
     width: 25%;
@@ -329,7 +329,7 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus {
   border: 3px solid #21A179;
 }
 
-/* Calendário */
+
 .calendar {
   width: 380px;
   height: auto;
@@ -413,7 +413,7 @@ input[name="tarefa"]:focus, input[name="descricao"]:focus {
   color: #fff;
 }
 
-/* Link ativo */
+
 a.active, a.active i {
   color: #21A179 !important;
   background-color: transparent !important;
@@ -423,7 +423,7 @@ a.active, a.active i {
 .SemanalHeader {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap; /* quebra em telas pequenas */
+  flex-wrap: wrap; 
   margin-bottom: 20px;
   background-color: #28B287;
   width: 64vw;
@@ -450,21 +450,166 @@ a.active, a.active i {
 }
 
 .task {
-  background-color: #21A179;
-  width: 58vw;
-  border-radius: 10px;
-  padding: 5px 10px;
+    display: flex;                
+    align-items: center;         
+    justify-content: space-between;
+    background-color: #21A179;
+    width: 58vw;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-.task strong.task-name {
-  font-weight: bold;
-  color: white;
+.task-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;            
 }
 
-.task span.task-desc {
-  color:#323232;
+.task-name {
+    font-weight: bold;
+    color: white;
+    font-size: 1.8vh;         
 }
+
+.task-desc {
+    color: #f0f0f0;             
+    font-size: 1.6vh;
+    margin-top: 2px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;                     
+    align-items: center;          
+}
+
 
 .message{
   color:#323232;
+}
+
+
+.espera-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.espera-box {
+    background-color: #fff;
+    padding: 4vh 5vw; 
+    border-radius: 3vh;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    font-family: Poppins, sans-serif; 
+}
+
+
+.espera-box h2 {
+    margin-bottom: 1.5vh;
+    font-size: 3vh;       
+    font-weight: 700;    
+    color: #21A179;     
+}
+
+
+.espera-box p {
+    font-size: 2vh;      
+    color: #323232;      
+    font-weight: 500;    
+    margin-top: 1vh;
+}
+.btndeletar, .btneditar {
+    display: inline-flex;             
+    justify-content: center;         
+    align-items: center;               
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 1.5vh;
+    text-decoration: none;
+    color: white;
+    background-color: #2A735C;
+    border: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.btndeletar:hover, .btneditar:hover {
+    background-color: white;
+    color: #21A179;
+    border-color: #2A735C;
+}
+.ajustar-div-editar {
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    min-height: 100vh;       
+    background-color: #f5f5f5; 
+}
+
+.Formeditar {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+    width: 50%;
+    min-width: 320px;
+    max-width: 700px;
+
+
+    padding: 40px;
+
+    min-height: 300px;
+    height: auto;
+
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.Formeditar h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.Formeditar input[type="text"],
+.Formeditar input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.Formeditar input[type="submit"] {
+    display: block;
+    margin: 25px auto 0;
+    background-color: #21A179;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Formeditar input[type="submit"]:hover {
+    background-color: #1a8364;
 }
